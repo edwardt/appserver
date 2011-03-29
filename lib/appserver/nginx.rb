@@ -43,15 +43,7 @@ module Appserver
       f.puts "server {"
       f.puts "  listen #{ssl ? 443 : 80};"
       f.puts "  server_name #{app.hostname};"
-      if ssl
-        f.puts "  ssl on;"
-        f.puts "  ssl_certificate #{app.ssl_cert};"
-        f.puts "  ssl_certificate_key #{app.ssl_key};"
-        f.puts "  ssl_session_timeout 5m;"
-        f.puts "  ssl_protocols SSLv2 SSLv3 TLSv1;"
-        f.puts "  ssl_ciphers ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;"
-        f.puts "  ssl_prefer_server_ciphers on;"
-      end
+      write_config_for_ssl(ssl, f, app)
       f.puts "  root #{app.public_path};"
       f.puts "  access_log #{app.access_log};"
       # TODO: maintenance mode rewriting
@@ -67,5 +59,29 @@ module Appserver
       f.puts "  error_page 500 502 503 504 /500.html;" if File.exist?(File.join(app.public_path, '500.html'))
       f.puts "}"
     end
+
+private 
+    
+    def write_config_for_ssl (ssl, f, app)
+      if ssl
+        f.puts "  ssl on;"
+        f.puts "  ssl_certificate #{app.ssl_cert};"
+        f.puts "  ssl_certificate_key #{app.ssl_key};"
+        f.puts "  ssl_session_timeout 5m;"
+        f.puts "  ssl_protocols SSLv2 SSLv3 TLSv1;"
+        f.puts "  ssl_ciphers ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;"
+        f.puts "  ssl_prefer_server_ciphers on;"
+      end
+    end
+    
+    def write_vhost_file (appName, srcPort, targetPort)
+      Utils.safe_replace_file(server_dir.nginx_conf) do |f|
+        
+      end
+    end
+    
   end
+  
+  private
+  
 end
