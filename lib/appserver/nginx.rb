@@ -85,7 +85,7 @@ private
               f.puts "  access_log #{app.access_log};"
               # TODO: maintenance mode rewriting
               f.puts "  if ($host = '$input_host' ) {"
-              f.puts "     rewrite  ^/(.*)$  http://mydomain.com:$input_port/$1  permanent;"
+              f.puts "     rewrite  ^/(.*)$  http://$vhost:$input_port/$1  permanent;"
               f.puts "   }"
               f.puts "  location @#{app.name} {"
               f.puts "    proxy_set_header X-Real-IP $remote_addr;"
