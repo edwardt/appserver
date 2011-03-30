@@ -84,7 +84,9 @@ private
               f.puts "  root #{app.public_path};"
               f.puts "  access_log #{app.access_log};"
               # TODO: maintenance mode rewriting
-              f.puts "  try_files $uri/index.html $uri.html $uri @#{app.name};"
+              f.puts "  if ($host = '$input_host' ) {"
+              f.puts "     rewrite  ^/(.*)$  http://mydomain.com:$input_port/$1  permanent;"
+              f.puts "   }"
               f.puts "  location @#{app.name} {"
               f.puts "    proxy_set_header X-Real-IP $remote_addr;"
               f.puts "    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;"
@@ -93,7 +95,6 @@ private
               f.puts "    proxy_redirect off;"
               f.puts "    proxy_pass http://#{app.name};"
               f.puts "  }"
-              f.puts "  error_page 500 502 503 504 /500.html;" if File.exist?(File.join(app.public_path, '500.html'))
               f.puts "}"
         end
       end
