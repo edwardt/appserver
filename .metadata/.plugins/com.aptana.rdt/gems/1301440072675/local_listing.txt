@@ -1,0 +1,232 @@
+abstract (1.0.0)
+    Author: makoto kuwata
+    Homepage: http://rubyforge.org/projects/abstract
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    a library which enable you to define abstract method in Ruby
+
+actionpack (3.0.5)
+    Author: David Heinemeier Hansson
+    Rubyforge: http://rubyforge.org/projects/actionpack
+    Homepage: http://www.rubyonrails.org
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    Web-flow and rendering framework putting the VC in MVC (part of
+    Rails).
+
+activemodel (3.0.5)
+    Author: David Heinemeier Hansson
+    Rubyforge: http://rubyforge.org/projects/activemodel
+    Homepage: http://www.rubyonrails.org
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    A toolkit for building modeling frameworks (part of Rails).
+
+activerecord (2.3.4)
+    Author: David Heinemeier Hansson
+    Rubyforge: http://rubyforge.org/projects/activerecord
+    Homepage: http://www.rubyonrails.org
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    Implements the ActiveRecord pattern for ORM.
+
+activeresource (2.3.4)
+    Author: David Heinemeier Hansson
+    Rubyforge: http://rubyforge.org/projects/activeresource
+    Homepage: http://www.rubyonrails.org
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    Think Active Record for web resources.
+
+activesupport (3.0.5, 2.3.4)
+    Author: David Heinemeier Hansson
+    Rubyforge: http://rubyforge.org/projects/activesupport
+    Homepage: http://www.rubyonrails.org
+    Installed at (3.0.5): /usr/local/lib/ruby/gems/1.9.1
+                 (2.3.4): /usr/local/lib/ruby/gems/1.9.1
+
+    A toolkit of support libraries and Ruby core extensions extracted
+    from the Rails framework.
+
+builder (2.1.2)
+    Author: Jim Weirich
+    Homepage: http://onestepback.org
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    Builders for MarkUp.
+
+bundler (1.0.10)
+    Authors: Carl Lerche, Yehuda Katz, André Arko, Terence Lee
+    Rubyforge: http://rubyforge.org/projects/bundler
+    Homepage: http://gembundler.com
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    The best way to manage your application's dependencies
+
+cgi_multipart_eof_fix (2.5.0)
+    Author: Evan Weaver
+    Rubyforge: http://rubyforge.org/projects/mongrel
+    Homepage:
+    http://blog.evanweaver.com/pages/code#cgi_multipart_eof_fix
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    Fix an exploitable bug in CGI multipart parsing.
+
+diff-lcs (1.1.2)
+    Author: 
+    Rubyforge: http://rubyforge.org/projects/ruwiki
+    Homepage: http://rubyforge.org/projects/ruwiki/
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    Provides a list of changes that represent the difference between two
+    sequenced collections.
+
+erubis (2.6.6)
+    Author: makoto kuwata
+    Rubyforge: http://rubyforge.org/projects/erubis
+    Homepage: http://www.kuwata-lab.com/erubis/
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    a fast and extensible eRuby implementation which supports
+    multi-language
+
+fastthread (1.0.7)
+    Author: MenTaLguY <mental@rydia.net>
+    Rubyforge: http://rubyforge.org/projects/mongrel
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    Optimized replacement for thread.rb primitives
+
+gem_plugin (0.2.3)
+    Author: Zed A. Shaw
+    Rubyforge: http://rubyforge.org/projects/mongrel
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    A plugin system based on rubygems that uses dependencies only
+
+git (1.2.5)
+    Author: Scott Chacon
+    Rubyforge: http://rubyforge.org/projects/git
+    Homepage: http://github.com/schacon/ruby-git
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    Ruby/Git is a Ruby library that can be used to create, read and
+    manipulate Git repositories by wrapping system calls to the git
+    binary
+
+grit (2.4.1)
+    Authors: Tom Preston-Werner, Scott Chacon
+    Rubyforge: http://rubyforge.org/projects/grit
+    Homepage: http://github.com/mojombo/grit
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    Ruby Git bindings.
+
+i18n (0.5.0)
+    Authors: Sven Fuchs, Joshua Harvey, Matt Aimonetti, Stephan Soller,
+    Saimon Moore
+    Rubyforge: http://rubyforge.org/projects/[none]
+    Homepage: http://github.com/svenfuchs/i18n
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    New wave Internationalization support for Ruby
+
+jeweler (1.5.2)
+    Author: Josh Nichols
+    Homepage: http://github.com/technicalpickles/jeweler
+    License: MIT
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    Opinionated tool for creating and managing RubyGem projects
+
+kgio (2.3.3)
+    Author: kgio hackers
+    Rubyforge: http://rubyforge.org/projects/rainbows
+    Homepage: http://bogomips.org/kgio/
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    kinder, gentler I/O for Ruby
+
+mime-types (1.16)
+    Author: Austin Ziegler
+    Rubyforge: http://rubyforge.org/projects/mime-types
+    Homepage: http://mime-types.rubyforge.org/
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    Manages a MIME Content-Type database that will return the
+    Content-Type for a given filename.
+
+minitest (1.6.0)
+    Author: 
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    This minitest is bundled with Ruby
+
+mocha (0.9.12)
+    Author: James Mead
+    Rubyforge: http://rubyforge.org/projects/mocha
+    Homepage: http://mocha.rubyforge.org
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    Mocking and stubbing library
+
+rack (1.2.2)
+    Author: Christian Neukirchen
+    Rubyforge: http://rubyforge.org/projects/rack
+    Homepage: http://rack.rubyforge.org
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    a modular Ruby webserver interface
+
+rack-mount (0.6.14)
+    Author: Joshua Peek
+    Rubyforge: http://rubyforge.org/projects/rack-mount
+    Homepage: https://github.com/josh/rack-mount
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    Stackable dynamic tree based Rack router
+
+rack-test (0.5.7)
+    Author: Bryan Helmkamp
+    Rubyforge: http://rubyforge.org/projects/rack-test
+    Homepage: http://github.com/brynary/rack-test
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    Simple testing API built on Rack
+
+rake (0.8.7)
+    Author: 
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    This rake is bundled with Ruby
+
+rdoc (2.5.8)
+    Author: 
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    This rdoc is bundled with Ruby
+
+test-unit (2.2.0)
+    Authors: Kouhei Sutou, Ryan Davis
+    Rubyforge: http://rubyforge.org/projects/test-unit
+    Homepage: http://rubyforge.org/projects/test-unit/
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    Test::Unit 2.x - Improved version of Test::Unit bundled in Ruby
+    1.8.x
+
+tzinfo (0.3.25)
+    Author: Philip Ross
+    Rubyforge: http://rubyforge.org/projects/tzinfo
+    Homepage: http://tzinfo.rubyforge.org/
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    Daylight-savings aware timezone library
+
+unicorn (3.5.0)
+    Author: Unicorn hackers
+    Rubyforge: http://rubyforge.org/projects/mongrel
+    Homepage: http://unicorn.bogomips.org/
+    Installed at: /usr/local/lib/ruby/gems/1.9.1
+
+    Rack HTTP server for fast clients and Unix

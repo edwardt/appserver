@@ -3,7 +3,7 @@ require 'etc'
 module Appserver
   class App < Struct.new(:server_dir, :name, :branch, :ruby, :environment, :user, :group, :instances, :preload,
                          :env_whitelist, :env, :max_cpu_usage, :max_memory_usage, :usage_check_cycles, :http_check_timeout,
-                         :domain, :hostname, :ssl_cert, :ssl_key, :public_dir)
+                         :domain, :hostname, :ssl_cert, :ssl_key, :public_dir, :targetport, :targethostname)
 
     SETTINGS_DEFAULTS = {
       :branch => 'master',
@@ -24,6 +24,8 @@ module Appserver
       :ssl_cert => nil,
       :ssl_key => nil,
       :public_dir => 'public',
+      :targetport => nil,
+      :targethostname =>Utils.system_hostname
     }
 
     SETTINGS_EXPAND = [ :ssl_cert, :ssl_key ]

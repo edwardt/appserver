@@ -44,19 +44,18 @@ module Appserver
       f.puts "  listen #{ssl ? 443 : 80};"
       f.puts "  server_name #{app.hostname};"
       write_config_for_ssl(ssl, f, app)
-      f.puts "  root #{app.public_path};"
+      #f.puts "  root #{app.public_path};"
       f.puts "  access_log #{app.access_log};"
-      # TODO: maintenance mode rewriting
-      f.puts "  try_files $uri/index.html $uri.html $uri @#{app.name};"
+      # f.puts "  try_files $uri/index.html $uri.html $uri @#{app.name};"
       f.puts "  location @#{app.name} {"
       f.puts "    proxy_set_header X-Real-IP $remote_addr;"
       f.puts "    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;"
       f.puts "    proxy_set_header X-Forwarded-Proto https;" if ssl
       f.puts "    proxy_set_header Host $http_host;"
       f.puts "    proxy_redirect off;"
-      f.puts "    proxy_pass http://#{app.name};"
+      f.puts "    proxy_pass http://#{app.targethostname}:#{app.targetport};"
       f.puts "  }"
-      f.puts "  error_page 500 502 503 504 /500.html;" if File.exist?(File.join(app.public_path, '500.html'))
+      #f.puts "  error_page 500 502 503 504 /500.html;" if File.exist?(File.join(app.public_path, '500.html'))
       f.puts "}"
     end
 
@@ -74,31 +73,7 @@ private
       end
     end
     
-    def write_vhost_file (vhost, appName, srcPort, targetHost, targetPort)
-      if vhost
-          Utils.safe_replace_file(server_dir+ appName+ "_vhost.conf") do |f|
-              f.puts "server {"
-              f.puts "  listen #{srcPort};"
-              f.puts "  server_name #{appName.hostname};"
-          
-              f.puts "  root #{app.public_path};"
-              f.puts "  access_log #{app.access_log};"
-              # TODO: maintenance mode rewriting
-              f.puts "  if ($host = '$input_host' ) {"
-              f.puts "     rewrite  ^/(.*)$  http://$targetHost:$input_port/$1  permanent;"
-              f.puts "   }"
-              f.puts "  location @#{app.name} {"
-              f.puts "    proxy_set_header X-Real-IP $remote_addr;"
-              f.puts "    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;"
-              f.puts "    proxy_set_header X-Forwarded-Proto https;" if ssl
-              f.puts "    proxy_set_header Host $http_host;"
-              f.puts "    proxy_redirect off;"
-              f.puts "    proxy_pass http://#{app.name};"
-              f.puts "  }"
-              f.puts "}"
-        end
-      end
-    end
+  
     
   end
   

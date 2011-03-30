@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="/usr/local" version="1.9.2" vmTypeId="org.rubypeople.rdt.launching.StandardVMType">
+<bootpath>
+<entry path="/usr/local/lib/ruby/site_ruby/1.9.1"/>
+<entry path="/usr/local/lib/ruby/site_ruby/1.9.1/i686-linux"/>
+<entry path="/usr/local/lib/ruby/site_ruby"/>
+<entry path="/usr/local/lib/ruby/vendor_ruby/1.9.1"/>
+<entry path="/usr/local/lib/ruby/vendor_ruby/1.9.1/i686-linux"/>
+<entry path="/usr/local/lib/ruby/vendor_ruby"/>
+<entry path="/usr/local/lib/ruby/1.9.1"/>
+<entry path="/usr/local/lib/ruby/1.9.1/i686-linux"/>
+</bootpath>
+</libraryInfo>
+<libraryInfo home="/home/vmplanet/.eclipse/org.eclipse.platform_3.5.0_155965261/plugins/org.jruby_1.2.0.9419p2" version="1.8.6" vmTypeId="org.rubypeople.rdt.launching.JRubyVMType">
+<bootpath>
+<entry path="/home/vmplanet/.eclipse/org.eclipse.platform_3.5.0_155965261/plugins/org.jruby_1.2.0.9419p2/lib/ruby/site_ruby/1.8"/>
+<entry path="/home/vmplanet/.eclipse/org.eclipse.platform_3.5.0_155965261/plugins/org.jruby_1.2.0.9419p2/lib/ruby/site_ruby"/>
+<entry path="/home/vmplanet/.eclipse/org.eclipse.platform_3.5.0_155965261/plugins/org.jruby_1.2.0.9419p2/lib/ruby/1.8"/>
+</bootpath>
+</libraryInfo>
+</libraryInfos>
