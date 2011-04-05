@@ -15,11 +15,11 @@
 #monit_reload '/usr/sbin/monit reload'
 
 # Path/name of the Nginx configuration snippet that should be written
-#nginx_conf 'nginx.conf'
+nginx_conf '/etc/nginx/nginx.conf'
 
 # Command to execute to tell Nginx to reload the configuration. Used within
 # the Monit snippet, so this command will be called as root
-#nginx_reload '/usr/sbin/nginx -s reload'
+nginx_reload '/usr/sbin/nginx -s reload'
 
 # Command to execute to tell Nginx to reopen the log files. Used within
 # the Logrotate snippet, so this command will be called as root
@@ -45,7 +45,7 @@
 # RVM, you can use "/usr/local/bin/rvm XYZ ruby" here to easily use
 # different Ruby versions for different applications. Make sure the
 # targetted Ruby version also has the appserver gem installed!
-#ruby '/usr/bin/ruby'
+ruby '/usr/bin/ruby'
 
 # Rack environment to run the application in. Defaults to 'production'
 #environment 'production'
@@ -100,7 +100,7 @@
 # tells Nginx, which requests to route to the application and therefore
 # makes it possible to run multiple domains on a single IP address. The
 # domain setting defaults to the system's domainname
-#domain 'example.com'
+domain 'example.com'
 
 # If a SSL certificate and key are set, Nginx will be configured to accept
 # HTTPS connections as well. The default is to only accept HTTP
@@ -109,7 +109,7 @@
 
 # Path where public static files should be served from by Nginx. Defaults to
 # the public directory in the application
-#public_dir 'public'
+public_dir 'public'
 
 
 #

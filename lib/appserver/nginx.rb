@@ -44,18 +44,10 @@ module Appserver
       f.puts "  listen #{ssl ? 443 : 80};"
       f.puts "  server_name #{app.hostname};"
       write_config_for_ssl(ssl, f, app)
-      #f.puts "  root #{app.public_path};"
       f.puts "  access_log #{app.access_log};"
-      # f.puts "  try_files $uri/index.html $uri.html $uri @#{app.name};"
-      f.puts "  location @#{app.name} {"
-      f.puts "    proxy_set_header X-Real-IP $remote_addr;"
-      f.puts "    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;"
-      f.puts "    proxy_set_header X-Forwarded-Proto https;" if ssl
-      f.puts "    proxy_set_header Host $http_host;"
-      f.puts "    proxy_redirect off;"
-      f.puts "    proxy_pass http://#{app.targethostname}:#{app.targetport};"
+      f.puts "  location /{"
+      f.puts "    rewrite ^ http://#{app:targethostname}:#{app:targetport}/$request_uri;"
       f.puts "  }"
-      #f.puts "  error_page 500 502 503 504 /500.html;" if File.exist?(File.join(app.public_path, '500.html'))
       f.puts "}"
     end
 
