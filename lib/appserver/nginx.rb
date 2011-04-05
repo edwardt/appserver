@@ -45,11 +45,16 @@ module Appserver
       f.puts "  server_name #{app.hostname};"
       write_config_for_ssl(ssl, f, app)
       f.puts "  access_log #{app.access_log};"
-      f.puts "  location /{"
-      f.puts "    rewrite ^ http://#{app:targethostname}:#{app:targetport}/$request_uri;"
-      f.puts "  }"
-      f.puts "}"
-    end
+      if ssl 
+            f.puts "     location /{"
+            f.puts "        rewrite ^ https://#{app:targethostname}:#{app:targetport}/$request_uri;"
+            f.puts "     }"
+      else 
+            f.puts "  location /{"
+            f.puts "    rewrite ^ http://#{app:targethostname}:#{app:targetport}/$request_uri;"
+            f.puts "  }"
+            f.puts "}"
+      end
 
 private 
     
